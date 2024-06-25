@@ -29,11 +29,13 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
 	if (option == 'a'){
 		cout << "ADD ITEM TO CART" << endl;
 		cout << "Enter the item name : " << endl;
+		cin.ignore();
 		getline(cin, menuInput);
 		newitemName = menuInput;
 		newItem.SetItemName(newitemName);
 
 		cout << "Enter the item description : " << endl;
+		cin.ignore();
 		getline(cin, menuInput);
 		description = menuInput;
 		newItem.SetDescription(description);
@@ -51,6 +53,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
 	if (option == 'd') {
 		cout << "REMOVE ITEM FROM CART" << endl;
 		cout <<"Enter name of item to remove : " << endl;
+		cin.ignore();
 		getline(cin, menuInput);
 		newitemName = menuInput;
 		theCart.RemoveItem(newitemName);
@@ -58,6 +61,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
 	if (option == 'c') {
 		cout << "CHANGE ITEM QUANTITY" << endl;
 		cout << "Enter the item name:" << endl;
+		cin.ignore();
 		getline(cin, menuInput);
 		newitemName = menuInput;
 		theCart.ModifyItem(newitemName);
